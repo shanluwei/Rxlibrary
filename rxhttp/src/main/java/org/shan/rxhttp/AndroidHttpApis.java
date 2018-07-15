@@ -1,8 +1,7 @@
-package org.shan.rxlibrary.http;
+package org.shan.rxhttp;
 
-import android.support.annotation.NonNull;
 
-import org.shan.rxlibrary.http.interfaces.IRequestBean;
+import org.shan.rxhttp.interfaces.IRequestBean;
 
 import io.reactivex.internal.functions.ObjectHelper;
 
@@ -19,7 +18,7 @@ public final class AndroidHttpApis {
      * 推荐在 Application 中使用
      * {@link Request#  }
      */
-    public static void initGlobalBuilderConfig(@NonNull Request.BuilderConfig builderConfig) {
+    public static void initGlobalBuilderConfig(Request.BuilderConfig builderConfig) {
         Request.initBuilderConfig(builderConfig);
     }
 
@@ -31,17 +30,17 @@ public final class AndroidHttpApis {
         return (T) request(Request.mGlobalBuilderConfig.getBuilder());
     }
 
-    public static <T extends Request.Builder> T request(@NonNull String url) {
+    public static <T extends Request.Builder> T request( String url) {
         ObjectHelper.requireNonNull(Request.mGlobalBuilderConfig, "mGlobalBuilderConfig is null");
         return (T) request(Request.mGlobalBuilderConfig.getBuilder().addUrl(url));
     }
 
-    public static <T extends Request.Builder> T request(@NonNull String url, @NonNull String method) {
+    public static <T extends Request.Builder> T request(String url,  String method) {
         ObjectHelper.requireNonNull(Request.mGlobalBuilderConfig, "mGlobalBuilderConfig is null");
         return (T) request(Request.mGlobalBuilderConfig.getBuilder().addUrl(url).addMethod(method));
     }
 
-    public static <K extends Request.Builder, T extends IRequestBean> K request(@NonNull T requestBean) {
+    public static <K extends Request.Builder, T extends IRequestBean> K request(T requestBean) {
         ObjectHelper.requireNonNull(Request.mGlobalBuilderConfig, "mGlobalBuilderConfig is null");
         return (K) request(Request.mGlobalBuilderConfig.getBuilder().addRequestBean(requestBean));
     }
@@ -49,7 +48,7 @@ public final class AndroidHttpApis {
     /**
      * 构建Builder
      */
-    public static <T extends Request.Builder> T request(@NonNull T builder) {
+    public static <T extends Request.Builder> T request( T builder) {
         return builder;
     }
 

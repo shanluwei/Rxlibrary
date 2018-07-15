@@ -1,4 +1,4 @@
-package org.shan.rxlibrary.http.interfaces;
+package org.shan.rxhttp.interfaces;
 
 import java.util.Map;
 

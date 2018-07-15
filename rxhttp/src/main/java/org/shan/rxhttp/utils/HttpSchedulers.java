@@ -1,4 +1,4 @@
-package org.shan.rxlibrary.http.utils;
+package org.shan.rxhttp.utils;
 
 import android.text.TextUtils;
 

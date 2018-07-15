@@ -1,4 +1,4 @@
-package org.shan.rxlibrary.http.enums;
+package org.shan.rxhttp.enums;
 
 /**
  * Created by shanluwei on 2018/5/23.

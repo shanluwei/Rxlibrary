@@ -1,4 +1,4 @@
-package org.shan.rxlibrary.http.annotations;
+package org.shan.rxhttp.annotations;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

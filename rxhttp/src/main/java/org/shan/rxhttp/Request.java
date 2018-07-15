@@ -1,4 +1,4 @@
-package org.shan.rxlibrary.http;
+package org.shan.rxhttp;
 
 import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
@@ -6,11 +6,11 @@ import android.text.TextUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.support.retrofit.Retrofit2ConverterFactory;
 
-import org.shan.rxlibrary.http.enums.RequestMethodType;
-import org.shan.rxlibrary.http.interfaces.IRequestBean;
-import org.shan.rxlibrary.http.interfaces.IRequestBuilder;
-import org.shan.rxlibrary.http.interfaces.IService;
-import org.shan.rxlibrary.http.utils.HttpSchedulers;
+import org.shan.rxhttp.enums.RequestMethodType;
+import org.shan.rxhttp.interfaces.IRequestBean;
+import org.shan.rxhttp.interfaces.IRequestBuilder;
+import org.shan.rxhttp.interfaces.IService;
+import org.shan.rxhttp.utils.HttpSchedulers;
 
 import java.io.File;
 import java.util.HashMap;
@@ -385,7 +385,6 @@ public class Request {
             Map<String, String> map = JSON.parseObject(JSON.toJSONString(requestBean), HashMap.class);
             copyMap(map, mParamsMap);
         }
-
 
 
         /**

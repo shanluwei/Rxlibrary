@@ -1,6 +1,7 @@
-package org.shan.rxlibrary.http.interfaces;
+package org.shan.rxhttp.interfaces;
 
-import org.shan.rxlibrary.http.Request;
+
+import org.shan.rxhttp.Request;
 
 import java.io.Serializable;
 import java.util.Map;

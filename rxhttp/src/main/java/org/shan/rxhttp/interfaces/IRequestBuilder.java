@@ -1,6 +1,7 @@
-package org.shan.rxlibrary.http.interfaces;
+package org.shan.rxhttp.interfaces;
 
-import org.shan.rxlibrary.http.enums.RequestMethodType;
+
+import org.shan.rxhttp.enums.RequestMethodType;
 
 import java.util.Map;
 

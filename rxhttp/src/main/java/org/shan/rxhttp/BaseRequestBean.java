@@ -1,9 +1,10 @@
-package org.shan.rxlibrary.http;
+package org.shan.rxhttp;
 
 import android.text.TextUtils;
 
-import org.shan.rxlibrary.http.annotations.PutQueryMap;
-import org.shan.rxlibrary.http.interfaces.IRequestBean;
+
+import org.shan.rxhttp.annotations.PutQueryMap;
+import org.shan.rxhttp.interfaces.IRequestBean;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
