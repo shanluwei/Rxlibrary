@@ -14,6 +14,7 @@
 		implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
 		implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 		implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+		implementation 'com.alibaba:fastjson:1.2.47'
 		//
 	        implementation 'com.github.shanluwei:Rxlibrary:1.0.3'
 	}
@@ -25,6 +26,23 @@
                 super.onCreate();
                 AndroidHttpApis.initGlobalBuilderConfig(Request.BuilderConfig.getBuilderConfig());
          }
-   
+   	2 使用
+	如：new 一个请求实例对象 ，RquestEntity entity = new RquestEntity(); RquestEntity要求实现IRequestBean接口 
+        AndroidHttpApis
+                .request(entity)
+                .build()
+                .rxRequest(String.class)
+                .compose(HttpSchedulers.<String>io_main())
+                .subscribe(new Consumer<String>() {
+                    @Override
+                    public void accept(String result) throws Exception {
+                        Log.d("AndroidHttpApis", result);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        Log.d("AndroidHttpApis", throwable.getMessage());
+                    }
+                });
   
   
