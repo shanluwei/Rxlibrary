@@ -10,7 +10,7 @@
 	}
 	Add the dependency
   	dependencies {
-		//添加第三方依赖	
+		//添加第三方依赖（如果项目已经添加可忽略）	
 		implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
 		implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 		implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
