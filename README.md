@@ -27,7 +27,8 @@
                 AndroidHttpApis.initGlobalBuilderConfig(Request.BuilderConfig.getBuilderConfig());
          }
    	2 使用
-	如：new 一个请求实例对象 ，RquestEntity entity = new RquestEntity(); 根据业务需求自定义RquestEntity要求实现IRequestBean接口，默认类名为请求方法名 
+	如：new 一个请求实例对象 ，RquestEntity entity = new RquestEntity(); 根据业务需求自定义RquestEntity要求实现IRequestBean接口，
+	默认类名为请求方法名 
         AndroidHttpApis
                 .request(entity)
                 .build()
