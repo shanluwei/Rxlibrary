@@ -1,7 +1,7 @@
 # Rxlibrary
 基于RxJava2+Retrofit2+RxAndroid+FastJson实现简单易用的网络请求框架。动态方法名，支持对象作为请求接口
 
-#1 基本使用(1)
+#1 基本使用(1)\n
 Add it in your root build.gradle at the end of repositories:
 	allprojects {
 		repositories {
